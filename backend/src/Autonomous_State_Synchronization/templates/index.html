@@ -1,0 +1,10 @@
+<div class="card">
+    <h2>System Status</h2>
+    <p>Jira Connection: <strong>{{ status }}</strong></p>
+    
+    {% if "Not Connected" in status %}
+        <a href="/auth/jira/connect" class="btn">Connect Jira</a>
+    {% else %}
+        <p class="success">Ready to process GitHub Webhooks!</p>
+    {% endif %}
+</div>
